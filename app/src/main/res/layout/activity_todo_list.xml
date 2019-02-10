@@ -38,31 +38,39 @@
         android:layout_above="@id/todo_list_activity_relative_layout_bottom"
         android:layout_below="@id/todo_list_activity_header"/>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/todo_list_activity_relative_layout_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
         android:layout_above="@id/todo_list_activity_button_add">
 
+        <!-- IMAGE BUTTON  -->
+        <ImageButton
+            android:id="@+id/todo_list_activity_button_add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ic_photo_black_24dp"
+            />
+
         <!-- EDIT TEXT  -->
         <EditText
             android:id="@+id/todo_list_activity_edit_text"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="@dimen/default_text_size"
             android:hint="@string/todolist_things_todo"
-            android:layout_toLeftOf="@id/todo_list_activity_spinner"/>
+            android:layout_weight="8"/>
 
         <!-- SPINNER  -->
         <Spinner
             android:id="@+id/todo_list_activity_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:textSize="@dimen/default_text_size"/>
+            android:layout_weight="1"/>
 
-    </RelativeLayout>
+    </LinearLayout>
 
     <!-- BUTTON TODOLIST -->
     <Button
